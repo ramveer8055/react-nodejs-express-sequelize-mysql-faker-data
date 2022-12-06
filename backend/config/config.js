@@ -1,15 +1,12 @@
+require('dotenv').config();
 module.exports = {
 
   /** DATABASE */
   db: {
-    // DB_HOST: process.env.DB_HOST,
-    // DB_USER: process.env.DB_USER,
-    // DB_PASS: process.env.DB_PASS,
-    // DB_NAME: process.env.DB_NAME,
-    DB_HOST: "localhost",
-    DB_USER: "root",
-    DB_PASS: "admin@123",
-    DB_NAME: "mydb",
+    DB_HOST: process.env.DB_HOST,
+    DB_USER: process.env.DB_USER,
+    DB_PASS: process.env.DB_PASS,
+    DB_NAME: process.env.DB_NAME,
     dialect: "mysql",
 
     // pool is optional, it will be used for Sequelize connection pool configuration
@@ -20,7 +17,6 @@ module.exports = {
       idle: 10000
     }
   },
-  
 };
 
 
